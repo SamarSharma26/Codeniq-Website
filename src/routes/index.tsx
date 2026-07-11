@@ -373,7 +373,7 @@ function Hero() {
 }
 
 function MarqueeStrip() {
-  const items = ["Design", "Development", "Performance", "SEO", "Motion", "Strategy", "Branding", "Launch"];
+  const items = ["Custom Software", "Web Apps", "Mobile Apps", "AI Solutions", "Cloud & DevOps", "SaaS Products", "Enterprise Systems", "UI/UX Design"];
   const row = [...items, ...items];
   return (
     <div className="border-y border-border bg-secondary/40 py-6 overflow-hidden">
@@ -391,15 +391,23 @@ function MarqueeStrip() {
 
 function Services() {
   return (
-    <Section id="services" eyebrow="What we do" title="Services" kicker="Built for ambitious brands.">
+    <Section id="services" eyebrow="What we do" title="Services" kicker="A complete technology partner — from first prototype to production scale.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s) => (
-          <div key={s.t} className="group relative bg-card p-8 transition-colors hover:bg-secondary">
+          <div key={s.t} className="group relative flex flex-col bg-card p-8 transition-colors hover:bg-secondary">
             <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-background text-primary transition-colors group-hover:border-primary">
               <s.icon className="h-5 w-5" />
             </div>
             <h3 className="text-xl font-semibold">{s.t}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+            <ul className="mt-5 space-y-1.5 text-sm text-muted-foreground">
+              {s.items.map((it) => (
+                <li key={it} className="flex items-center gap-2">
+                  <span className="h-1 w-1 rounded-full bg-primary" />
+                  {it}
+                </li>
+              ))}
+            </ul>
             <ArrowUpRight className="absolute right-6 top-6 h-5 w-5 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
           </div>
         ))}
@@ -613,16 +621,17 @@ function About() {
     <Section id="about" eyebrow="About" title="A modern digital studio, obsessed with the details.">
       <div className="grid gap-12 md:grid-cols-5">
         <p className="text-lg leading-relaxed text-muted-foreground md:col-span-3">
-          Codeniq is a modern digital agency helping ambitious businesses establish a strong
-          online presence through high-quality websites, intuitive user experiences, and
-          scalable web applications. We combine craftsmanship, performance, and attention to
-          detail to build digital products that feel expensive — because they should.
+          Codeniq is a software development agency that designs and builds custom software,
+          AI-powered solutions, web applications, mobile apps, SaaS products, enterprise
+          systems, automation tools, and high-performance websites for startups and
+          businesses. We combine product thinking, engineering rigor, and design craft to
+          ship software that scales.
         </p>
         <div className="md:col-span-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border">
           {[
             { k: "10+", v: "Projects" },
-            { k: "6", v: "Industries" },
-            { k: "95+", v: "Lighthouse" },
+            { k: "6", v: "Service Lines" },
+            { k: "AI", v: "Native" },
             { k: "100%", v: "Craft" },
           ].map((s) => (
             <div key={s.v} className="bg-card p-6">
