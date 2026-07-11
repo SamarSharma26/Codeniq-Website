@@ -125,22 +125,22 @@ const TESTIMONIALS = [
   {
     q: "Codeniq turned our idea into a shipped product in weeks — architecture, AI features, and polish that felt premium from day one.",
     n: "Aarav Mehta",
-    r: "Founder, Northgate Labs",
+    r: "Founder",
   },
   {
     q: "They rebuilt our internal ERP and cut operations time in half. The engineering quality is genuinely rare.",
     n: "Priya Shetty",
-    r: "COO, Bloom Retail",
+    r: "COO",
   },
   {
     q: "They ship like a top-tier product team. Cleanest codebase and cloud setup we've ever inherited.",
     n: "Rohan Kapoor",
-    r: "CTO, Ferra Labs",
+    r: "CTO",
   },
   {
     q: "From AI strategy to mobile app to launch — Codeniq owned the whole stack. Now we finally move at startup speed.",
     n: "Sana Iyer",
-    r: "Head of Product, Vault9",
+    r: "Head of Product",
   },
 ];
 
@@ -394,7 +394,7 @@ function Services() {
     <Section id="services" eyebrow="What we do" title="Services" kicker="A complete technology partner — from first prototype to production scale.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s) => (
-          <div key={s.t} className="group relative flex flex-col bg-card p-8 transition-colors hover:bg-secondary">
+          <div key={s.t} className="group relative flex flex-col bg-card p-8 transition-all duration-300 hover:bg-secondary hover:-translate-y-1 active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none">
             <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-background text-primary transition-colors group-hover:border-primary">
               <s.icon className="h-5 w-5" />
             </div>
@@ -581,7 +581,7 @@ function TestimonialCard({ t, i }: { t: (typeof TESTIMONIALS)[number]; i: number
       ref={reveal}
       data-reveal
       style={{ transitionDelay: `${i * 80}ms` }}
-      className="group relative rounded-3xl border border-border bg-card p-8 transition-colors hover:border-primary"
+      className="group relative rounded-3xl border border-border bg-card p-8 transition-all duration-300 hover:border-primary hover:-translate-y-1 hover:shadow-[0_20px_50px_-25px_hsl(var(--primary)/0.4)] active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none"
     >
       <div className="text-6xl leading-none text-primary/60">"</div>
       <p className="mt-2 text-lg leading-relaxed text-foreground">{t.q}</p>
