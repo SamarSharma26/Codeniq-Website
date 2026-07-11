@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import logoAsset from "@/assets/codeniq-logo.png.asset.json";
+const logoAsset = { url: "/codeniq-logo.png" };
 import {
   ArrowUpRight,
   Phone,
