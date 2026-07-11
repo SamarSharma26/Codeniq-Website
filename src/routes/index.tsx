@@ -8,15 +8,12 @@ import {
   Mail,
   Instagram,
   Linkedin,
-  Zap,
-  Sparkles,
-  Search,
   Code2,
   Layers,
   Palette,
-  Rocket,
-  ShieldCheck,
-  MousePointerClick,
+  Cloud,
+  Smartphone,
+  Brain,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -64,32 +61,55 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { t: "UI/UX Design", d: "Interfaces engineered for clarity and conversion.", icon: Palette },
-  { t: "Website Design", d: "Distinctive, brand-first visual systems.", icon: Sparkles },
-  { t: "Frontend Development", d: "Pixel-perfect, buttery-smooth interfaces.", icon: Code2 },
-  { t: "React Development", d: "Composable, maintainable component systems.", icon: Layers },
-  { t: "Next.js Development", d: "SSR, ISR & edge-fast production apps.", icon: Rocket },
-  { t: "Full Stack Development", d: "End-to-end product engineering.", icon: Layers },
-  { t: "Landing Pages", d: "High-intent pages built to convert.", icon: MousePointerClick },
-  { t: "Business Websites", d: "Credibility that scales your pipeline.", icon: ShieldCheck },
-  { t: "Restaurant Websites", d: "Menus, reservations & ordering flows.", icon: Sparkles },
-  { t: "Healthcare Websites", d: "Trust-first, accessible, compliant.", icon: ShieldCheck },
-  { t: "Portfolio Websites", d: "Statements that get you hired.", icon: Palette },
-  { t: "Performance Optimization", d: "Core Web Vitals in the green.", icon: Zap },
-  { t: "SEO Optimization", d: "Rank, get found, get chosen.", icon: Search },
+  {
+    t: "Custom Software Development",
+    d: "Enterprise-grade systems tailored to how your business actually runs.",
+    icon: Code2,
+    items: ["Enterprise Software", "Business Management Systems", "CRM & ERP Solutions", "Internal Dashboards", "Custom Portals"],
+  },
+  {
+    t: "Web Development",
+    d: "Fast, scalable web products — from marketing sites to full SaaS.",
+    icon: Layers,
+    items: ["Corporate Websites", "SaaS Applications", "Progressive Web Apps", "E-commerce Platforms", "Custom Web Applications"],
+  },
+  {
+    t: "Mobile App Development",
+    d: "Native-quality apps for Android, iOS, and cross-platform.",
+    icon: Smartphone,
+    items: ["Android Apps", "iOS Apps", "Cross-Platform Apps (React Native)"],
+  },
+  {
+    t: "AI Solutions",
+    d: "Intelligent products and automation that compound with your data.",
+    icon: Brain,
+    items: ["AI Chatbots", "AI Assistants", "Workflow Automation", "AI Integrations", "Recommendation Systems", "Computer Vision", "OCR Solutions"],
+  },
+  {
+    t: "Cloud & Backend",
+    d: "Reliable APIs and infrastructure engineered to scale from day one.",
+    icon: Cloud,
+    items: ["API Development", "Authentication Systems", "Database Design", "Cloud Deployment", "DevOps", "Scalable Infrastructure"],
+  },
+  {
+    t: "UI/UX Design",
+    d: "Product design that turns complex flows into effortless experiences.",
+    icon: Palette,
+    items: ["Product Design", "Dashboard Design", "Wireframing", "Interactive Prototypes"],
+  },
 ];
 
 const WHY = [
-  "Lightning Fast",
-  "Premium UI",
-  "Mobile First",
-  "SEO Ready",
-  "Clean Code",
+  "Product Thinking",
   "Scalable Architecture",
-  "Pixel Perfect Design",
-  "Responsive Everywhere",
-  "Smooth Animations",
-  "Long-term Support",
+  "AI-Native Engineering",
+  "Type-Safe Codebases",
+  "Mobile First",
+  "Cloud & DevOps",
+  "Security by Default",
+  "Performance Obsessed",
+  "Design That Ships",
+  "Long-term Partnership",
 ];
 
 const PROCESS = [
@@ -103,39 +123,40 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    q: "CodeNiq turned our idea into a product that felt premium from day one. Speed, polish, communication — 10/10.",
+    q: "Codeniq turned our idea into a shipped product in weeks — architecture, AI features, and polish that felt premium from day one.",
     n: "Aarav Mehta",
-    r: "Founder, Northgate Studios",
+    r: "Founder, Northgate Labs",
   },
   {
-    q: "Our conversion rate nearly doubled after the new site launched. The attention to detail is unreal.",
+    q: "They rebuilt our internal ERP and cut operations time in half. The engineering quality is genuinely rare.",
     n: "Priya Shetty",
-    r: "CEO, Bloom & Co.",
+    r: "COO, Bloom Retail",
   },
   {
-    q: "They ship like a top-tier product team. Cleanest codebase we've ever inherited.",
+    q: "They ship like a top-tier product team. Cleanest codebase and cloud setup we've ever inherited.",
     n: "Rohan Kapoor",
     r: "CTO, Ferra Labs",
   },
   {
-    q: "From strategy to pixels, CodeNiq gets it. Our new website finally matches our brand ambition.",
+    q: "From AI strategy to mobile app to launch — Codeniq owned the whole stack. Now we finally move at startup speed.",
     n: "Sana Iyer",
-    r: "Head of Marketing, Vault9",
+    r: "Head of Product, Vault9",
   },
 ];
 
 const TECHS = [
   "React",
   "Next.js",
-  "Tailwind CSS",
+  "React Native",
   "TypeScript",
+  "Tailwind CSS",
   "Node.js",
-  "Express",
+  "Python",
+  "PostgreSQL",
   "MongoDB",
-  "Firebase",
-  "Framer Motion",
-  "GSAP",
-  "GitHub",
+  "AWS",
+  "Docker",
+  "OpenAI",
   "Vercel",
 ];
 
@@ -202,8 +223,8 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
         <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tight">
-          <img src={logoAsset.url} alt="CodeNiq" className="h-9 w-9 rounded-md" />
-          CodeNiq<span className="text-primary">.</span>
+          <img src={logoAsset.url} alt="Codeniq" className="h-9 w-9 rounded-md" />
+          Codeniq<span className="text-primary">.</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((n) => (
@@ -296,33 +317,34 @@ function Hero() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           <span className="h-px w-10 bg-primary" />
-          Premium Web Development Agency
+          Premium Software Development Agency
         </div>
 
-        <h1 className="text-[14vw] font-bold leading-[0.9] tracking-tighter md:text-[9rem]">
-          Websites <span className="text-primary">That</span>
+        <h1 className="text-[12vw] font-bold leading-[0.9] tracking-tighter md:text-[8rem]">
+          Engineering <span className="text-primary">Software</span>
           <br />
-          Grow<span className="text-primary">.</span> Businesses<span className="text-primary">.</span>
+          That Scales<span className="text-primary">.</span>
         </h1>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:items-end">
           <p className="max-w-xl text-lg text-muted-foreground md:text-xl">
-            We design and develop premium websites that are blazing fast, SEO-ready,
-            mobile-first, and built to convert visitors into customers.
+            We help startups and businesses transform ideas into scalable software —
+            from AI-powered platforms and mobile apps to enterprise systems and
+            premium web experiences.
           </p>
           <div className="flex flex-wrap items-center gap-4 md:justify-end">
             <a
-              href="#portfolio"
+              href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
             >
-              View Portfolio
+              Book a Free Consultation
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#contact"
+              href="#portfolio"
               className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Book Free Consultation
+              View Our Work
             </a>
           </div>
         </div>
@@ -351,7 +373,7 @@ function Hero() {
 }
 
 function MarqueeStrip() {
-  const items = ["Design", "Development", "Performance", "SEO", "Motion", "Strategy", "Branding", "Launch"];
+  const items = ["Custom Software", "Web Apps", "Mobile Apps", "AI Solutions", "Cloud & DevOps", "SaaS Products", "Enterprise Systems", "UI/UX Design"];
   const row = [...items, ...items];
   return (
     <div className="border-y border-border bg-secondary/40 py-6 overflow-hidden">
@@ -369,15 +391,23 @@ function MarqueeStrip() {
 
 function Services() {
   return (
-    <Section id="services" eyebrow="What we do" title="Services" kicker="Built for ambitious brands.">
+    <Section id="services" eyebrow="What we do" title="Services" kicker="A complete technology partner — from first prototype to production scale.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s) => (
-          <div key={s.t} className="group relative bg-card p-8 transition-colors hover:bg-secondary">
+          <div key={s.t} className="group relative flex flex-col bg-card p-8 transition-colors hover:bg-secondary">
             <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-background text-primary transition-colors group-hover:border-primary">
               <s.icon className="h-5 w-5" />
             </div>
             <h3 className="text-xl font-semibold">{s.t}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
+            <ul className="mt-5 space-y-1.5 text-sm text-muted-foreground">
+              {s.items.map((it) => (
+                <li key={it} className="flex items-center gap-2">
+                  <span className="h-1 w-1 rounded-full bg-primary" />
+                  {it}
+                </li>
+              ))}
+            </ul>
             <ArrowUpRight className="absolute right-6 top-6 h-5 w-5 text-muted-foreground opacity-0 transition-all group-hover:opacity-100 group-hover:text-primary" />
           </div>
         ))}
@@ -392,7 +422,7 @@ function Portfolio() {
       id="portfolio"
       eyebrow="Selected work"
       title="Portfolio"
-      kicker="10+ projects delivered for founders, restaurants, clinics and creators."
+      kicker="Software and digital products shipped for founders, restaurants, clinics and modern brands."
     >
       <div className="grid gap-8 md:grid-cols-2">
         {PROJECTS.map((p, i) => (
@@ -480,7 +510,7 @@ function ProjectCard({ p, i }: { p: (typeof PROJECTS)[number]; i: number }) {
 
 function WhyUs() {
   return (
-    <Section id="why" eyebrow="Why CodeNiq" title="Built different. On purpose." kicker="The details that make premium feel premium.">
+    <Section id="why" eyebrow="Why Codeniq" title="Built different. On purpose." kicker="The details that make premium feel premium.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
         {WHY.map((w, i) => (
           <div key={w} className="group relative bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
@@ -591,16 +621,17 @@ function About() {
     <Section id="about" eyebrow="About" title="A modern digital studio, obsessed with the details.">
       <div className="grid gap-12 md:grid-cols-5">
         <p className="text-lg leading-relaxed text-muted-foreground md:col-span-3">
-          CodeNiq is a modern digital agency helping ambitious businesses establish a strong
-          online presence through high-quality websites, intuitive user experiences, and
-          scalable web applications. We combine craftsmanship, performance, and attention to
-          detail to build digital products that feel expensive — because they should.
+          Codeniq is a software development agency that designs and builds custom software,
+          AI-powered solutions, web applications, mobile apps, SaaS products, enterprise
+          systems, automation tools, and high-performance websites for startups and
+          businesses. We combine product thinking, engineering rigor, and design craft to
+          ship software that scales.
         </p>
         <div className="md:col-span-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border">
           {[
             { k: "10+", v: "Projects" },
-            { k: "6", v: "Industries" },
-            { k: "95+", v: "Lighthouse" },
+            { k: "6", v: "Service Lines" },
+            { k: "AI", v: "Native" },
             { k: "100%", v: "Craft" },
           ].map((s) => (
             <div key={s.v} className="bg-card p-6">
@@ -767,8 +798,8 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 text-2xl font-bold">
-              <img src={logoAsset.url} alt="CodeNiq" className="h-11 w-11 rounded-md" />
-              CodeNiq<span className="text-primary">.</span>
+              <img src={logoAsset.url} alt="Codeniq" className="h-11 w-11 rounded-md" />
+              Codeniq<span className="text-primary">.</span>
             </a>
             <p className="mt-4 max-w-md text-muted-foreground">
               Crafting high-performance digital experiences for ambitious brands.
@@ -800,7 +831,7 @@ function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 md:flex-row md:items-center">
           <div className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} CodeNiq. All rights reserved.
+            © {new Date().getFullYear()} Codeniq. All rights reserved.
           </div>
           <div className="flex items-center gap-3">
             <a
@@ -830,7 +861,7 @@ function Footer() {
             </a>
           </div>
           <div className="text-xs text-muted-foreground">
-            Designed & Developed by <span className="text-foreground">CodeNiq</span>
+            Designed & Developed by <span className="text-foreground">Codeniq</span>
           </div>
         </div>
       </div>
