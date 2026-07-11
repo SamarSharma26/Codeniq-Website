@@ -422,7 +422,7 @@ function Portfolio() {
       id="portfolio"
       eyebrow="Selected work"
       title="Portfolio"
-      kicker="10+ projects delivered for founders, restaurants, clinics and creators."
+      kicker="Software and digital products shipped for founders, restaurants, clinics and modern brands."
     >
       <div className="grid gap-8 md:grid-cols-2">
         {PROJECTS.map((p, i) => (
