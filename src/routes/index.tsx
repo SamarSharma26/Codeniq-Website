@@ -379,24 +379,24 @@ function Hero() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+        <div data-reveal data-anim="fade" className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           <span className="h-px w-10 bg-primary" />
           Premium Software Development Agency
         </div>
 
-        <h1 className="text-[12vw] font-bold leading-[0.9] tracking-tighter md:text-[8rem]">
+        <h1 data-reveal data-delay="80" className="text-[12vw] font-bold leading-[0.9] tracking-tighter md:text-[8rem]">
           Engineering <span className="text-primary">Software</span>
           <br />
           That Scales<span className="text-primary">.</span>
         </h1>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:items-end">
-          <p className="max-w-xl text-lg text-muted-foreground md:text-xl">
+          <p data-reveal data-delay="180" className="max-w-xl text-lg text-muted-foreground md:text-xl">
             We help startups and businesses transform ideas into scalable software —
             from AI-powered platforms and mobile apps to enterprise systems and
             premium web experiences.
           </p>
-          <div className="flex flex-wrap items-center gap-4 md:justify-end">
+          <div data-reveal data-delay="260" className="flex flex-wrap items-center gap-4 md:justify-end">
             <a
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
@@ -419,8 +419,8 @@ function Hero() {
             { k: "100%", v: "Client Satisfaction" },
             { k: "95+", v: "Lighthouse Score" },
             { k: "24/7", v: "Long-term Support" },
-          ].map((s) => (
-            <div key={s.v}>
+          ].map((s, i) => (
+            <div key={s.v} data-reveal data-anim="scale" data-delay={String(i * 80)}>
               <div className="text-4xl font-bold md:text-5xl">{s.k}</div>
               <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">{s.v}</div>
             </div>
@@ -457,8 +457,8 @@ function Services() {
   return (
     <Section id="services" eyebrow="What we do" title="Services" kicker="A complete technology partner — from first prototype to production scale.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-        {SERVICES.map((s) => (
-          <div key={s.t} className="group relative flex flex-col bg-card p-8 transition-all duration-300 hover:bg-secondary hover:-translate-y-1 active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none">
+        {SERVICES.map((s, i) => (
+          <div key={s.t} data-reveal data-delay={String((i % 3) * 90)} className="group relative flex flex-col bg-card p-8 transition-all duration-300 hover:bg-secondary hover:-translate-y-1 active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none">
             <div className="mb-6 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-background text-primary transition-colors group-hover:border-primary">
               <s.icon className="h-5 w-5" />
             </div>
@@ -577,7 +577,7 @@ function WhyUs() {
     <Section id="why" eyebrow="Why Codeniq" title="Built different. On purpose." kicker="The details that make premium feel premium.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
         {WHY.map((w, i) => (
-          <div key={w} className="group relative bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
+          <div key={w} data-reveal data-anim="scale" data-delay={String(i * 70)} className="group relative bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
             <div className="font-mono text-xs text-muted-foreground group-hover:text-primary-foreground/70">
               {String(i + 1).padStart(2, "0")}
             </div>
@@ -666,7 +666,7 @@ function Technologies() {
   const row = [...TECHS, ...TECHS];
   return (
     <Section id="tech" eyebrow="Our stack" title="Technologies" kicker="Best-in-class tools, wielded well.">
-      <div className="overflow-hidden rounded-3xl border border-border bg-card py-10">
+      <div data-reveal data-anim="scale" className="overflow-hidden rounded-3xl border border-border bg-card py-10">
         <div className="flex w-max marquee gap-14 whitespace-nowrap px-8 text-2xl md:text-3xl">
           {row.map((t, i) => (
             <span key={i} className="flex items-center gap-14 text-muted-foreground">
@@ -684,14 +684,14 @@ function About() {
   return (
     <Section id="about" eyebrow="About" title="A modern digital studio, obsessed with the details.">
       <div className="grid gap-12 md:grid-cols-5">
-        <p className="text-lg leading-relaxed text-muted-foreground md:col-span-3">
+        <p data-reveal data-anim="left" className="text-lg leading-relaxed text-muted-foreground md:col-span-3">
           Codeniq is a software development agency that designs and builds custom software,
           AI-powered solutions, web applications, mobile apps, SaaS products, enterprise
           systems, automation tools, and high-performance websites for startups and
           businesses. We combine product thinking, engineering rigor, and design craft to
           ship software that scales.
         </p>
-        <div className="md:col-span-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border">
+        <div data-reveal data-anim="right" data-delay="120" className="md:col-span-2 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border">
           {[
             { k: "10+", v: "Projects" },
             { k: "6", v: "Service Lines" },
