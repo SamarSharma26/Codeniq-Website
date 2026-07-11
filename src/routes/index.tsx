@@ -873,7 +873,15 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 text-2xl font-bold">
-              <img src={logoAsset.url} alt="Codeniq" className="h-11 w-11 rounded-md" />
+              <img
+                src={logoAsset.url}
+                alt="Codeniq logo"
+                width={44}
+                height={44}
+                loading="lazy"
+                decoding="async"
+                className="h-11 w-11 shrink-0 rounded-md bg-primary/10 object-cover"
+              />
               Codeniq<span className="text-primary">.</span>
             </a>
             <p className="mt-4 max-w-md text-muted-foreground">
