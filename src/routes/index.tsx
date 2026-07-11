@@ -103,7 +103,7 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    q: "CodeNiq turned our idea into a product that felt premium from day one. Speed, polish, communication — 10/10.",
+    q: "Codeniq turned our idea into a product that felt premium from day one. Speed, polish, communication — 10/10.",
     n: "Aarav Mehta",
     r: "Founder, Northgate Studios",
   },
@@ -118,7 +118,7 @@ const TESTIMONIALS = [
     r: "CTO, Ferra Labs",
   },
   {
-    q: "From strategy to pixels, CodeNiq gets it. Our new website finally matches our brand ambition.",
+    q: "From strategy to pixels, Codeniq gets it. Our new website finally matches our brand ambition.",
     n: "Sana Iyer",
     r: "Head of Marketing, Vault9",
   },
@@ -202,8 +202,8 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
         <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tight">
-          <img src={logoAsset.url} alt="CodeNiq" className="h-9 w-9 rounded-md" />
-          CodeNiq<span className="text-primary">.</span>
+          <img src={logoAsset.url} alt="Codeniq" className="h-9 w-9 rounded-md" />
+          Codeniq<span className="text-primary">.</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
           {NAV.map((n) => (
@@ -480,7 +480,7 @@ function ProjectCard({ p, i }: { p: (typeof PROJECTS)[number]; i: number }) {
 
 function WhyUs() {
   return (
-    <Section id="why" eyebrow="Why CodeNiq" title="Built different. On purpose." kicker="The details that make premium feel premium.">
+    <Section id="why" eyebrow="Why Codeniq" title="Built different. On purpose." kicker="The details that make premium feel premium.">
       <div className="grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
         {WHY.map((w, i) => (
           <div key={w} className="group relative bg-card p-8 transition-colors hover:bg-primary hover:text-primary-foreground">
@@ -591,7 +591,7 @@ function About() {
     <Section id="about" eyebrow="About" title="A modern digital studio, obsessed with the details.">
       <div className="grid gap-12 md:grid-cols-5">
         <p className="text-lg leading-relaxed text-muted-foreground md:col-span-3">
-          CodeNiq is a modern digital agency helping ambitious businesses establish a strong
+          Codeniq is a modern digital agency helping ambitious businesses establish a strong
           online presence through high-quality websites, intuitive user experiences, and
           scalable web applications. We combine craftsmanship, performance, and attention to
           detail to build digital products that feel expensive — because they should.
@@ -767,8 +767,8 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 text-2xl font-bold">
-              <img src={logoAsset.url} alt="CodeNiq" className="h-11 w-11 rounded-md" />
-              CodeNiq<span className="text-primary">.</span>
+              <img src={logoAsset.url} alt="Codeniq" className="h-11 w-11 rounded-md" />
+              Codeniq<span className="text-primary">.</span>
             </a>
             <p className="mt-4 max-w-md text-muted-foreground">
               Crafting high-performance digital experiences for ambitious brands.
@@ -800,7 +800,7 @@ function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 md:flex-row md:items-center">
           <div className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} CodeNiq. All rights reserved.
+            © {new Date().getFullYear()} Codeniq. All rights reserved.
           </div>
           <div className="flex items-center gap-3">
             <a
@@ -830,7 +830,7 @@ function Footer() {
             </a>
           </div>
           <div className="text-xs text-muted-foreground">
-            Designed & Developed by <span className="text-foreground">CodeNiq</span>
+            Designed & Developed by <span className="text-foreground">Codeniq</span>
           </div>
         </div>
       </div>

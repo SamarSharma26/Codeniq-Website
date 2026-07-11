@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CodeNiq — Crafting High-Performance Digital Experiences" },
+      { title: "Codeniq — Crafting High-Performance Digital Experiences" },
       {
         name: "description",
         content:
-          "CodeNiq is a premium web development agency building blazing-fast, SEO-ready, mobile-first websites that convert visitors into customers.",
+          "Codeniq is a premium web development agency building blazing-fast, SEO-ready, mobile-first websites that convert visitors into customers.",
       },
-      { name: "author", content: "CodeNiq" },
-      { property: "og:title", content: "CodeNiq — Premium Web Development Agency" },
+      { name: "author", content: "Codeniq" },
+      { property: "og:title", content: "Codeniq — Premium Web Development Agency" },
       {
         property: "og:description",
         content:
