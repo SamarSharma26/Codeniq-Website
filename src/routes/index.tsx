@@ -258,16 +258,7 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
         <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tight">
-          <img
-            src={logoAsset.url}
-            alt="Codeniq logo"
-            width={36}
-            height={36}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className="h-9 w-9 shrink-0 rounded-md bg-primary/10 object-cover"
-          />
+          <img src={logoAsset.url} alt="Codeniq" className="h-9 w-9 rounded-md" />
           Codeniq<span className="text-primary">.</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
@@ -873,15 +864,7 @@ function Footer() {
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
             <a href="#home" className="flex items-center gap-3 text-2xl font-bold">
-              <img
-                src={logoAsset.url}
-                alt="Codeniq logo"
-                width={44}
-                height={44}
-                loading="lazy"
-                decoding="async"
-                className="h-11 w-11 shrink-0 rounded-md bg-primary/10 object-cover"
-              />
+              <img src={logoAsset.url} alt="Codeniq" className="h-11 w-11 rounded-md" />
               Codeniq<span className="text-primary">.</span>
             </a>
             <p className="mt-4 max-w-md text-muted-foreground">
