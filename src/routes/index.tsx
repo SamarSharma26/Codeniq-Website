@@ -791,7 +791,7 @@ function Contact() {
             </button>
           </form>
 
-          <div className="lg:col-span-2">
+          <div data-reveal data-anim="right" data-delay="120" className="lg:col-span-2">
             <div className="rounded-3xl border border-border bg-card/60 p-8 backdrop-blur-xl">
               <div className="text-xs uppercase tracking-widest text-muted-foreground">Direct</div>
               <a href="tel:+919284782207" className="mt-2 block text-2xl font-semibold hover:text-primary">
