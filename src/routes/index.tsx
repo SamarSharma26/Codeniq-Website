@@ -727,7 +727,7 @@ function Contact() {
         style={{ background: "radial-gradient(circle, var(--color-primary), transparent 60%)" }}
       />
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-12 max-w-3xl">
+        <div data-reveal className="mb-12 max-w-3xl">
           <div className="mb-4 text-xs uppercase tracking-[0.25em] text-primary">Contact</div>
           <h2 className="text-5xl font-bold leading-[0.95] tracking-tighter md:text-7xl">
             Let's build something amazing<span className="text-primary">.</span>
@@ -739,6 +739,8 @@ function Contact() {
 
         <div className="grid gap-10 lg:grid-cols-5">
           <form
+            data-reveal
+            data-anim="left"
             action="https://formspree.io/f/mjgqjawo"
             method="POST"
             onSubmit={async (e) => {
