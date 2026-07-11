@@ -84,14 +84,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Codeniq is a software development agency building custom software, AI solutions, web apps, mobile apps, SaaS products and enterprise systems for startups and businesses.",
       },
       { name: "author", content: "Codeniq" },
-      { property: "og:title", content: "Codeniq — Premium Software Development Agency" },
+      { property: "og:title", content: "Codeniq — Building Software That Scales Businesses" },
       {
         property: "og:description",
         content:
-          "Custom software, AI solutions, mobile apps, SaaS platforms and enterprise systems, engineered to scale.",
+          "Codeniq is a software development agency building custom software, AI solutions, web apps, mobile apps, SaaS products and enterprise systems for startups and businesses.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Codeniq — Building Software That Scales Businesses" },
+      { name: "twitter:description", content: "Codeniq is a software development agency building custom software, AI solutions, web apps, mobile apps, SaaS products and enterprise systems for startups and businesses." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0sLyPCmJK1bKTVKqL74Aamy0R2B2/social-images/social-1783778615306-Red_Black_Typography_Nine_Brand_Logo_(4).webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0sLyPCmJK1bKTVKqL74Aamy0R2B2/social-images/social-1783778615306-Red_Black_Typography_Nine_Brand_Logo_(4).webp" },
     ],
     links: [
       {
