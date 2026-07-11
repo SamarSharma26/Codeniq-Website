@@ -245,34 +245,63 @@ function Nav() {
           Book a Call <ArrowUpRight className="h-4 w-4" />
         </a>
         <button
-          className="md:hidden rounded-md border border-border p-2"
+          type="button"
+          className="group relative md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/60 backdrop-blur transition-all duration-300 hover:border-primary hover:bg-primary/10 active:scale-95"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
-          <div className="space-y-1.5">
-            <span className="block h-0.5 w-5 bg-foreground" />
-            <span className="block h-0.5 w-5 bg-foreground" />
-          </div>
+          <span className="sr-only">Toggle menu</span>
+          <span className="relative block h-3.5 w-5">
+            <span
+              className={`absolute left-0 block h-[2px] w-5 rounded-full bg-foreground transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:bg-primary ${
+                open ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-1/2 block h-[2px] w-5 -translate-y-1/2 rounded-full bg-foreground transition-all duration-200 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:bg-primary ${
+                open ? "scale-x-0 opacity-0" : "scale-x-100 opacity-100"
+              }`}
+            />
+            <span
+              className={`absolute left-0 block h-[2px] w-5 rounded-full bg-foreground transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:bg-primary ${
+                open ? "bottom-1/2 translate-y-1/2 -rotate-45" : "bottom-0"
+              }`}
+            />
+          </span>
         </button>
       </div>
-      {open && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
-            {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-lg">
-                {n.label}
-              </a>
-            ))}
+      <div
+        className={`md:hidden overflow-hidden border-border bg-background/95 backdrop-blur-xl transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          open ? "max-h-[480px] border-t opacity-100" : "max-h-0 border-t-0 opacity-0"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-6">
+          {NAV.map((n, i) => (
             <a
-              href="#contact"
+              key={n.href}
+              href={n.href}
               onClick={() => setOpen(false)}
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+              style={{ transitionDelay: open ? `${80 + i * 50}ms` : "0ms" }}
+              className={`text-lg font-medium transition-all duration-500 ease-out hover:text-primary ${
+                open ? "translate-x-0 opacity-100" : "-translate-x-3 opacity-0"
+              }`}
             >
-              Book a Call <ArrowUpRight className="h-4 w-4" />
+              {n.label}
             </a>
-          </div>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            style={{ transitionDelay: open ? `${80 + NAV.length * 50}ms` : "0ms" }}
+            className={`inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)] transition-all duration-500 ease-out hover:scale-[1.03] ${
+              open ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+            }`}
+          >
+            Book a Call <ArrowUpRight className="h-4 w-4" />
+          </a>
         </div>
-      )}
+      </div>
     </header>
   );
 }
