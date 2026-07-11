@@ -183,11 +183,46 @@ function useReveal<T extends HTMLElement>() {
 }
 
 function Index() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            const el = e.target as HTMLElement;
+            const delay = el.dataset.delay;
+            if (delay) el.style.transitionDelay = `${delay}ms`;
+            el.dataset.reveal = "in";
+            io.unobserve(el);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+    );
+    const scan = () =>
+      document
+        .querySelectorAll<HTMLElement>('[data-reveal=""], [data-reveal]:not([data-reveal="in"])')
+        .forEach((el) => io.observe(el));
+    scan();
+    const mo = new MutationObserver(scan);
+    mo.observe(document.body, { childList: true, subtree: true });
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground grain">
       <style>{`
-        [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
-        [data-reveal="in"] { opacity: 1; transform: none; }
+        [data-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1); will-change: opacity, transform; }
+        [data-reveal][data-anim="left"]  { transform: translateX(-32px); }
+        [data-reveal][data-anim="right"] { transform: translateX(32px); }
+        [data-reveal][data-anim="scale"] { transform: scale(.94); }
+        [data-reveal][data-anim="fade"]  { transform: none; }
+        [data-reveal="in"] { opacity: 1 !important; transform: none !important; }
+        @media (prefers-reduced-motion: reduce) {
+          [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+        }
         html { scroll-behavior: smooth; }
       `}</style>
       <Nav />
