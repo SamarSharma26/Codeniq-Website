@@ -258,7 +258,16 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
         <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tight">
-          <img src={logoAsset.url} alt="Codeniq" className="h-9 w-9 rounded-md" />
+          <img
+            src={logoAsset.url}
+            alt="Codeniq logo"
+            width={36}
+            height={36}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="h-9 w-9 shrink-0 rounded-md bg-primary/10 object-cover"
+          />
           Codeniq<span className="text-primary">.</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
