@@ -102,8 +102,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/__l5e/assets-v1/f0cc5a80-9058-445b-8ac4-66c631c01c0d/codeniq-logo.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/__l5e/assets-v1/f0cc5a80-9058-445b-8ac4-66c631c01c0d/codeniq-logo.png" },
+      { rel: "icon", href: "/codeniq-logo.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/codeniq-logo.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
