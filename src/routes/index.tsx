@@ -10,13 +10,13 @@ import {
   Linkedin,
   Zap,
   Sparkles,
-  Search,
   Code2,
   Layers,
   Palette,
   Rocket,
-  ShieldCheck,
-  MousePointerClick,
+  Cloud,
+  Smartphone,
+  Brain,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -64,32 +64,55 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { t: "UI/UX Design", d: "Interfaces engineered for clarity and conversion.", icon: Palette },
-  { t: "Website Design", d: "Distinctive, brand-first visual systems.", icon: Sparkles },
-  { t: "Frontend Development", d: "Pixel-perfect, buttery-smooth interfaces.", icon: Code2 },
-  { t: "React Development", d: "Composable, maintainable component systems.", icon: Layers },
-  { t: "Next.js Development", d: "SSR, ISR & edge-fast production apps.", icon: Rocket },
-  { t: "Full Stack Development", d: "End-to-end product engineering.", icon: Layers },
-  { t: "Landing Pages", d: "High-intent pages built to convert.", icon: MousePointerClick },
-  { t: "Business Websites", d: "Credibility that scales your pipeline.", icon: ShieldCheck },
-  { t: "Restaurant Websites", d: "Menus, reservations & ordering flows.", icon: Sparkles },
-  { t: "Healthcare Websites", d: "Trust-first, accessible, compliant.", icon: ShieldCheck },
-  { t: "Portfolio Websites", d: "Statements that get you hired.", icon: Palette },
-  { t: "Performance Optimization", d: "Core Web Vitals in the green.", icon: Zap },
-  { t: "SEO Optimization", d: "Rank, get found, get chosen.", icon: Search },
+  {
+    t: "Custom Software Development",
+    d: "Enterprise-grade systems tailored to how your business actually runs.",
+    icon: Code2,
+    items: ["Enterprise Software", "Business Management Systems", "CRM & ERP Solutions", "Internal Dashboards", "Custom Portals"],
+  },
+  {
+    t: "Web Development",
+    d: "Fast, scalable web products — from marketing sites to full SaaS.",
+    icon: Layers,
+    items: ["Corporate Websites", "SaaS Applications", "Progressive Web Apps", "E-commerce Platforms", "Custom Web Applications"],
+  },
+  {
+    t: "Mobile App Development",
+    d: "Native-quality apps for Android, iOS, and cross-platform.",
+    icon: Smartphone,
+    items: ["Android Apps", "iOS Apps", "Cross-Platform Apps (React Native)"],
+  },
+  {
+    t: "AI Solutions",
+    d: "Intelligent products and automation that compound with your data.",
+    icon: Brain,
+    items: ["AI Chatbots", "AI Assistants", "Workflow Automation", "AI Integrations", "Recommendation Systems", "Computer Vision", "OCR Solutions"],
+  },
+  {
+    t: "Cloud & Backend",
+    d: "Reliable APIs and infrastructure engineered to scale from day one.",
+    icon: Cloud,
+    items: ["API Development", "Authentication Systems", "Database Design", "Cloud Deployment", "DevOps", "Scalable Infrastructure"],
+  },
+  {
+    t: "UI/UX Design",
+    d: "Product design that turns complex flows into effortless experiences.",
+    icon: Palette,
+    items: ["Product Design", "Dashboard Design", "Wireframing", "Interactive Prototypes"],
+  },
 ];
 
 const WHY = [
-  "Lightning Fast",
-  "Premium UI",
-  "Mobile First",
-  "SEO Ready",
-  "Clean Code",
+  "Product Thinking",
   "Scalable Architecture",
-  "Pixel Perfect Design",
-  "Responsive Everywhere",
-  "Smooth Animations",
-  "Long-term Support",
+  "AI-Native Engineering",
+  "Type-Safe Codebases",
+  "Mobile First",
+  "Cloud & DevOps",
+  "Security by Default",
+  "Performance Obsessed",
+  "Design That Ships",
+  "Long-term Partnership",
 ];
 
 const PROCESS = [
@@ -103,39 +126,40 @@ const PROCESS = [
 
 const TESTIMONIALS = [
   {
-    q: "Codeniq turned our idea into a product that felt premium from day one. Speed, polish, communication — 10/10.",
+    q: "Codeniq turned our idea into a shipped product in weeks — architecture, AI features, and polish that felt premium from day one.",
     n: "Aarav Mehta",
-    r: "Founder, Northgate Studios",
+    r: "Founder, Northgate Labs",
   },
   {
-    q: "Our conversion rate nearly doubled after the new site launched. The attention to detail is unreal.",
+    q: "They rebuilt our internal ERP and cut operations time in half. The engineering quality is genuinely rare.",
     n: "Priya Shetty",
-    r: "CEO, Bloom & Co.",
+    r: "COO, Bloom Retail",
   },
   {
-    q: "They ship like a top-tier product team. Cleanest codebase we've ever inherited.",
+    q: "They ship like a top-tier product team. Cleanest codebase and cloud setup we've ever inherited.",
     n: "Rohan Kapoor",
     r: "CTO, Ferra Labs",
   },
   {
-    q: "From strategy to pixels, Codeniq gets it. Our new website finally matches our brand ambition.",
+    q: "From AI strategy to mobile app to launch — Codeniq owned the whole stack. Now we finally move at startup speed.",
     n: "Sana Iyer",
-    r: "Head of Marketing, Vault9",
+    r: "Head of Product, Vault9",
   },
 ];
 
 const TECHS = [
   "React",
   "Next.js",
-  "Tailwind CSS",
+  "React Native",
   "TypeScript",
+  "Tailwind CSS",
   "Node.js",
-  "Express",
+  "Python",
+  "PostgreSQL",
   "MongoDB",
-  "Firebase",
-  "Framer Motion",
-  "GSAP",
-  "GitHub",
+  "AWS",
+  "Docker",
+  "OpenAI",
   "Vercel",
 ];
 
