@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
+import logoAsset from "@/assets/codeniq-logo.png.asset.json";
 import {
   ArrowUpRight,
   Phone,
@@ -200,8 +201,8 @@ function Nav() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:py-5">
-        <a href="#home" className="flex items-center gap-2 text-xl font-bold tracking-tight">
-          <span className="inline-block h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_16px_var(--color-primary)]" />
+        <a href="#home" className="flex items-center gap-2.5 text-xl font-bold tracking-tight">
+          <img src={logoAsset.url} alt="CodeNiq" className="h-9 w-9 rounded-md" />
           CodeNiq<span className="text-primary">.</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
@@ -643,9 +644,25 @@ function Contact() {
 
         <div className="grid gap-10 lg:grid-cols-5">
           <form
-            onSubmit={(e) => {
+            action="https://formspree.io/f/mjgqjawo"
+            method="POST"
+            onSubmit={async (e) => {
               e.preventDefault();
-              setSent(true);
+              const form = e.currentTarget;
+              const data = new FormData(form);
+              try {
+                const res = await fetch("https://formspree.io/f/mjgqjawo", {
+                  method: "POST",
+                  body: data,
+                  headers: { Accept: "application/json" },
+                });
+                if (res.ok) {
+                  setSent(true);
+                  form.reset();
+                }
+              } catch {
+                // no-op
+              }
             }}
             className="rounded-3xl border border-border bg-card/60 p-8 backdrop-blur-xl lg:col-span-3"
           >
@@ -749,8 +766,8 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <a href="#home" className="flex items-center gap-2 text-2xl font-bold">
-              <span className="inline-block h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_16px_var(--color-primary)]" />
+            <a href="#home" className="flex items-center gap-3 text-2xl font-bold">
+              <img src={logoAsset.url} alt="CodeNiq" className="h-11 w-11 rounded-md" />
               CodeNiq<span className="text-primary">.</span>
             </a>
             <p className="mt-4 max-w-md text-muted-foreground">
