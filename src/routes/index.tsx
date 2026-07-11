@@ -8,12 +8,9 @@ import {
   Mail,
   Instagram,
   Linkedin,
-  Zap,
-  Sparkles,
   Code2,
   Layers,
   Palette,
-  Rocket,
   Cloud,
   Smartphone,
   Brain,
@@ -320,33 +317,34 @@ function Hero() {
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-8 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           <span className="h-px w-10 bg-primary" />
-          Premium Web Development Agency
+          Premium Software Development Agency
         </div>
 
-        <h1 className="text-[14vw] font-bold leading-[0.9] tracking-tighter md:text-[9rem]">
-          Websites <span className="text-primary">That</span>
+        <h1 className="text-[12vw] font-bold leading-[0.9] tracking-tighter md:text-[8rem]">
+          Engineering <span className="text-primary">Software</span>
           <br />
-          Grow<span className="text-primary">.</span> Businesses<span className="text-primary">.</span>
+          That Scales<span className="text-primary">.</span>
         </h1>
 
         <div className="mt-10 grid gap-10 md:grid-cols-2 md:items-end">
           <p className="max-w-xl text-lg text-muted-foreground md:text-xl">
-            We design and develop premium websites that are blazing fast, SEO-ready,
-            mobile-first, and built to convert visitors into customers.
+            We help startups and businesses transform ideas into scalable software —
+            from AI-powered platforms and mobile apps to enterprise systems and
+            premium web experiences.
           </p>
           <div className="flex flex-wrap items-center gap-4 md:justify-end">
             <a
-              href="#portfolio"
+              href="#contact"
               className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
             >
-              View Portfolio
+              Book a Free Consultation
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#contact"
+              href="#portfolio"
               className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Book Free Consultation
+              View Our Work
             </a>
           </div>
         </div>
